@@ -1,0 +1,29 @@
+<div class="header"></div>
+<div class="container">
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-8">
+      
+      <textarea name="comment" #comm class="form-control" rows="5" required="required"></textarea>
+      
+    </div>
+    <div class="col-md-4">
+      
+      <select name="username" [(ngModel)]="slectedUser" class="form-control" required="required" #seletedUser>
+        <option [value]="user.name" *ngFor="let user of users">
+            {{ user.name }}
+        </option>
+      </select>
+      <br/>
+      
+      <button type="button" class="btn btn-success" (click)="addComment(comm.value)">Submit Comment....!</button>
+      
+    </div>
+  </div>
+  <br/><br/>
+  <app-showcomment *ngFor="let comm of comments; let i = index" 
+  [inpComment]="comm"
+   (like)="updateLike(i)"
+    (dislike)="updateDislike(i)"
+    (delete)="deleteComment(i)"></app-showcomment>
+</div>

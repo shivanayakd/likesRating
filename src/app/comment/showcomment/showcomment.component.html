@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="comment">
+        	<span class="glyphicon glyphicon-remove pull-right" (click)="deleteComment()"></span>
+        <h3>Name: {{ inpComment.name }}</h3>
+        <p><i>Time: {{ inpComment.time }}</i></p>
+        <p> {{ inpComment.comment}}</p>
+        
+        <div class="row">
+          <div class="col-md-8"></div>
+          <div class="col-md-2">
+              <button type="button" class="btn btn-large btn-block btn-primary" (click)="addLike()">{{ inpComment.likes }} <span class="glyphicon glyphicon-thumbs-up"></span> Like </button>
+          </div>
+          <div class="col-md-2">
+              <button type="button" class="btn btn-large btn-block btn-danger" (click)="addDisLike()">{{ inpComment.dislikes }} <span class="glyphicon glyphicon-thumbs-down"></span> DisLike</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
