@@ -4,7 +4,7 @@ import  { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CommentComponent } from './comment/comment.component';
-import { ShowcommentComponent } from './Comment/showcomment/showcomment.component';
+import { ShowcommentComponent } from './comment/showcomment/showcomment.component';
 
 @NgModule({
   declarations: [
